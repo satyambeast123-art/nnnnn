@@ -10,7 +10,7 @@ interface Answer {
 }
 
 export async function generateRoutine(answers: (Option | undefined)[]): Promise<string> {
- const apiKey = getApiKeyFromRuntime() || "";
+ const apiKey = getApiKeyFromRuntime();
 const ai = new GoogleGenAI({ apiKey });
 
 
