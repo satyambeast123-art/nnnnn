@@ -1,7 +1,7 @@
 
 import { getApiKeyFromRuntime } from "../utils/getApiKey";
 import { GoogleGenAI } from "@google/genai";
-import { QUIZ_QUESTIONS } from '../constants';
+import { QUIZ_QUESTIONS } from "../../constants";
 import { Option } from '../types';
 
 interface Answer {
