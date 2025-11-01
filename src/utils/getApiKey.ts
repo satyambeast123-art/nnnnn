@@ -1,4 +1,3 @@
 export function getApiKeyFromRuntime() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("key");
+  return import.meta.env.VITE_API_KEY;
 }
