@@ -1,4 +1,5 @@
 
+import { getApiKeyFromRuntime } from "../utils/getApiKey";
 import { GoogleGenAI } from "@google/genai";
 import { QUIZ_QUESTIONS } from '../constants';
 import { Option } from '../types';
@@ -9,7 +10,9 @@ interface Answer {
 }
 
 export async function generateRoutine(answers: (Option | undefined)[]): Promise<string> {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+ const apiKey = getApiKeyFromRuntime() || "";
+const ai = new GoogleGenAI({ apiKey });
+
 
   const formattedAnswers: Answer[] = answers
     .map((answer, index) => {
