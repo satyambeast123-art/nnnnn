@@ -1,7 +1,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { QUIZ_QUESTIONS } from './constants';
-import { generateRoutine } from './services/geminiService';
+import { generateRoutine } from "./src/services/geminiService";
 import { Option, QuizState } from './types';
 import LoadingSpinner from './components/LoadingSpinner';
 
