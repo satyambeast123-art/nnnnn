@@ -2,8 +2,8 @@
 import React, { useState, useCallback } from 'react';
 import { QUIZ_QUESTIONS } from './constants';
 import { generateRoutine } from "./src/services/geminiService";
-import { Option, QuizState } from './types';
-import LoadingSpinner from "./src/components/LoadingSpinner"
+import { Option, QuizState } from "./src/types";
+import LoadingSpinner from "./src/components/LoadingSpinner";
 
 const App: React.FC = () => {
   const [quizState, setQuizState] = useState<QuizState>('start');
